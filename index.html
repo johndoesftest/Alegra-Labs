@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alegra Labs — Masters of the web. Global IT services company building world-class digital solutions across healthcare, e-commerce, and enterprise platforms.">
+  <title>Alegra Labs — Masters of the Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Alegra Labs home">
+        <span class="logo-text">Alegra<span class="logo-accent">Labs</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#stats" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Clients</a></li>
+      </ul>
+      <a href="#contact" id="nav-cta" class="btn-outline">Let's Talk</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <ul role="list">
+        <li><a href="#work" class="mobile-nav-link">Work</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#stats" class="mobile-nav-link">About</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Clients</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <p>Masters of the Web</p>
+        <div class="mobile-social">
+          <a href="https://www.facebook.com/Alegralabs/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/helix-enterprise" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/alegralabs22" target="_blank" rel="noopener" aria-label="Twitter/X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alegralabs7/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HERO ─────────────────────────────────────────── -->
+  <section id="hero" aria-label="Hero">
+    <!-- WebGL Fluid Canvas -->
+    <canvas id="fluid-canvas" class="hero-fluid" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>ISO 9001:2015 Certified</span>
+      </div>
+      <h1 class="hero-headline">
+        <span class="hero-line" data-text="Every great" id="hl1">Every great</span>
+        <span class="hero-line hero-line--accent" data-text="project" id="hl2">project</span>
+        <span class="hero-line" data-text="begins with an" id="hl3">begins with an</span>
+        <span class="hero-line hero-line--outline" data-text="even better story." id="hl4">even better story.</span>
+      </h1>
+      <p class="hero-sub" id="hero-sub">We craft world-class digital solutions that transform industries — from healthcare automation in Germany to heritage digitisation in New York.</p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#work" class="btn-primary" id="hero-cta-work">View Our Work</a>
+        <a href="#contact" class="btn-ghost" id="hero-cta-contact">Start a Project</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"><div class="scroll-progress"></div></div>
+    </div>
+    <!-- Floating tags -->
+    <div class="hero-tags" aria-hidden="true">
+      <span class="htag htag--1">Web Dev</span>
+      <span class="htag htag--2">AI & ML</span>
+      <span class="htag htag--3">Mobile</span>
+      <span class="htag htag--4">SaaS</span>
+    </div>
+  </section>
+
+  <!-- ─── MARQUEE ─────────────────────────────────────── -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Masters of the Web</span><span class="marquee-sep">✦</span>
+        <span>300+ Projects Delivered</span><span class="marquee-sep">✦</span>
+        <span>14 Countries</span><span class="marquee-sep">✦</span>
+        <span>300,000 Hours Coded</span><span class="marquee-sep">✦</span>
+        <span>Germany · India · UK</span><span class="marquee-sep">✦</span>
+        <span>ISO 9001:2015</span><span class="marquee-sep">✦</span>
+        <span>Siliconindia Top 10 Startups NE 2023</span><span class="marquee-sep">✦</span>
+        <!-- duplicate for seamless loop -->
+        <span>Masters of the Web</span><span class="marquee-sep">✦</span>
+        <span>300+ Projects Delivered</span><span class="marquee-sep">✦</span>
+        <span>14 Countries</span><span class="marquee-sep">✦</span>
+        <span>300,000 Hours Coded</span><span class="marquee-sep">✦</span>
+        <span>Germany · India · UK</span><span class="marquee-sep">✦</span>
+        <span>ISO 9001:2015</span><span class="marquee-sep">✦</span>
+        <span>Siliconindia Top 10 Startups NE 2023</span><span class="marquee-sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── WORK / CASE STUDIES ─────────────────────────── -->
+  <section id="work" class="section" aria-label="Featured work">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">Stories we've<br>helped create</h2>
+      </div>
+
+      <div class="work-grid">
+        <!-- Case 1: Chairsight -->
+        <article class="work-card reveal" id="work-chairsight" data-index="01">
+          <div class="work-card__visual">
+            <div class="work-card__bg work-card__bg--blue"></div>
+            <img src="work1.png" alt="Chairsight" class="work-parallax-img" />
+            <span class="work-card__number">01</span>
+          </div>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Chairsight</h3>
+            <p class="work-card__sub">Dental Therapy Automation · Germany</p>
+            <p class="work-card__desc">The first automated solution for dental treatment plan generation (HKP) — combining subsidy calculations and therapy assessments in one integrated system.</p>
+            <div class="work-card__tags">
+              <span class="tag">Healthcare</span>
+              <span class="tag">AI Automation</span>
+              <span class="tag">Germany</span>
+            </div>
+            <a href="https://www.alegralabs.com/dental" target="_blank" rel="noopener" class="work-card__link">Read Case Study <span class="link-arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Case 2: Kamwo -->
+        <article class="work-card reveal" id="work-kamwo" data-index="02">
+          <div class="work-card__visual">
+            <div class="work-card__bg work-card__bg--coral"></div>
+            <img src="work2.png" alt="Kamwo Meridian Herbs" class="work-parallax-img" />
+            <span class="work-card__number">02</span>
+          </div>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Kamwo Meridian Herbs</h3>
+            <p class="work-card__sub">TCM Industry Digitisation · New York</p>
+            <p class="work-card__desc">Ground-breaking digitisation of a legacy industry — enabling doctors to prescribe Traditional Chinese Medicine online with direct shipping worldwide.</p>
+            <div class="work-card__tags">
+              <span class="tag">E-commerce</span>
+              <span class="tag">Healthcare</span>
+              <span class="tag">New York</span>
+            </div>
+            <a href="https://www.alegralabs.com/kamwo" target="_blank" rel="noopener" class="work-card__link">Read Case Study <span class="link-arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Case 3: SymCom -->
+        <article class="work-card reveal" id="work-symcom" data-index="03">
+          <div class="work-card__visual">
+            <div class="work-card__bg work-card__bg--violet"></div>
+            <img src="work3.png" alt="SymCom AI" class="work-parallax-img" />
+            <span class="work-card__number">03</span>
+          </div>
+          <div class="work-card__body">
+            <h3 class="work-card__title">SymCom</h3>
+            <p class="work-card__sub">AI Homeopathy Repertory · Deutschland</p>
+            <p class="work-card__desc">A self-learning AI system that unifies the scattered world of homeopathy materia medica, enabling practitioners to access 100% of the global knowledge base.</p>
+            <div class="work-card__tags">
+              <span class="tag">AI / ML</span>
+              <span class="tag">Healthcare</span>
+              <span class="tag">NLP</span>
+            </div>
+            <a href="https://www.alegralabs.com/symcom" target="_blank" rel="noopener" class="work-card__link">Read Case Study <span class="link-arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─────────────────────────────────────── -->
+  <section id="services" class="section section--dark" aria-label="Services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">End-to-end digital<br>craftsmanship</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-item reveal" id="service-web">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="8" width="40" height="28" rx="3"/><path d="M16 44h16M24 36v8"/><circle cx="24" cy="22" r="6"/><path d="M18 22h-6M30 22h6M24 16v-6M24 28v6"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Scalable, performant web applications built with modern stacks — from SaaS platforms to enterprise portals.</p>
+        </div>
+        <div class="service-item reveal" id="service-mobile">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="12" y="4" width="24" height="40" rx="4"/><line x1="20" y1="8" x2="28" y2="8"/><circle cx="24" cy="37" r="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Mobile Apps</h3>
+          <p class="service-desc">Native and cross-platform mobile experiences that delight users across iOS and Android.</p>
+        </div>
+        <div class="service-item reveal" id="service-ai">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="8"/><path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.17 9.17l2.83 2.83M35.17 35.17l2.83 2.83M9.17 38.83l2.83-2.83M35.17 12.83l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3 class="service-title">AI & Machine Learning</h3>
+          <p class="service-desc">Self-learning systems, NLP engines, and intelligent automation that create genuine competitive moats.</p>
+        </div>
+        <div class="service-item reveal" id="service-saas">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 8C16.27 8 10 14.27 10 22c0 3.6 1.32 6.88 3.48 9.42L8 36h8v-8l-3.27 3.27A11.94 11.94 0 0112 22c0-6.63 5.37-12 12-12s12 5.37 12 12c0 6.63-5.37 12-12 12v4c8.84 0 16-7.16 16-16S32.84 8 24 8z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">SaaS Platforms</h3>
+          <p class="service-desc">Subscription-based digital products architected for growth — robust APIs, multi-tenancy, and bulletproof reliability.</p>
+        </div>
+        <div class="service-item reveal" id="service-digital">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 36l10-10 8 8 6-6 8 8"/><rect x="4" y="8" width="40" height="32" rx="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Digital Transformation</h3>
+          <p class="service-desc">Legacy-to-digital migration and workflow automation for industries yet to be touched by modern technology.</p>
+        </div>
+        <div class="service-item reveal" id="service-ui">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="16" cy="16" r="8"/><rect x="24" y="8" width="16" height="16"/><polygon points="12,28 20,44 28,28"/>
+            </svg>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">Award-worthy interfaces born from deep research and a relentless obsession with user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS ─────────────────────────────────────────── -->
+  <section id="stats" class="section" aria-label="Statistics">
+    <div class="container">
+      <div class="stats-layout">
+        <div class="stats-left reveal">
+          <span class="section-label">By The Numbers</span>
+          <h2 class="section-title">Proof is in<br>the work</h2>
+          <p class="stats-desc">From startup ideas to enterprise-grade platforms, our track record spans industries, continents, and complexity levels.</p>
+          <div class="stats-badges">
+            <div class="stat-badge"><span>Germany</span></div>
+            <div class="stat-badge"><span>India</span></div>
+            <div class="stat-badge"><span>United Kingdom</span></div>
+          </div>
+        </div>
+        <div class="stats-right">
+          <div class="stat-block reveal" id="stat-projects">
+            <span class="stat-num" data-target="300" data-suffix="+">0</span>
+            <span class="stat-label">Projects delivered</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="stat-block reveal" id="stat-countries">
+            <span class="stat-num" data-target="14">0</span>
+            <span class="stat-label">Countries with trusting clients</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:70%"></div></div>
+          </div>
+          <div class="stat-block reveal" id="stat-hours">
+            <span class="stat-num" data-target="300000" data-separator=",">0</span>
+            <span class="stat-label">Hours of coding excellence</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:100%"></div></div>
+          </div>
+          <div class="stat-block reveal" id="stat-years">
+            <span class="stat-num" data-target="8" data-suffix="+">0</span>
+            <span class="stat-label">Years building the impossible</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width:55%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─────────────────────────────────── -->
+  <section id="testimonials" class="section" aria-label="Client testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">What our clients<br>have to say</h2>
+      </div>
+      <div class="testimonials-track-wrapper">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>CK</span></div>
+            <blockquote>"AlegraLabs opens the horizon to possibilities we have not thought of before. After many years, we are finally on the right track."</blockquote>
+            <cite>Dr. Carl Rudolf Klinkenberg <span>Doctor med., Deutschland</span></cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>NW</span></div>
+            <blockquote>"AlegraLabs quickly grasps requirements and implements them with very good ideas. Results are very satisfactory. Problems are always revised immediately."</blockquote>
+            <cite>Dr. Nora Wirtz <span>Doctor, Deutschland</span></cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>BE</span></div>
+            <blockquote>"I worked with Alegra Labs for more than 2 years on various projects and wouldn't hesitate to recommend them. Professionalism, integrity, and expertise."</blockquote>
+            <cite>Brad Edwards <span>COO, Bitlov.com</span></cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>AB</span></div>
+            <blockquote>"I have challenged them with overly-ambitious requests — but they have never failed to deliver great results quickly. I would highly recommend Alegra Labs."</blockquote>
+            <cite>Anjana Balakumar <span>Capital Markets &amp; Special Projects, Uber</span></cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>RC</span></div>
+            <blockquote>"Leaders with a strong work ethic, excellent understanding of all things Linux — a developer who truly loves their craft."</blockquote>
+            <cite>Ray Croney <span>Founder &amp; CEO, Cenedex Software Solutions</span></cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" aria-hidden="true"><span>MF</span></div>
+            <blockquote>"Not only can they develop exactly what I need, they also care to build something that users will like. Strong communication and great delivery."</blockquote>
+            <cite>Mark Ford <span>Founder, Castorabbot.com</span></cite>
+          </div>
+        </div>
+        <div class="testimonials-controls">
+          <button id="t-prev" class="t-btn" aria-label="Previous testimonial">←</button>
+          <div class="t-dots" id="t-dots" role="tablist"></div>
+          <button id="t-next" class="t-btn" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT / CTA ────────────────────────────────── -->
+  <section id="contact" class="section cta-section" aria-label="Contact">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-blob cta-blob--1"></div>
+      <div class="cta-blob cta-blob--2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label">Start a Project</span>
+        <h2 class="cta-title">Ready to build<br>something great?</h2>
+        <p class="cta-sub">Tell us your story. We'll engineer the solution.</p>
+        <div class="cta-offices">
+          <div class="office">
+            <strong>Germany</strong>
+            <span>Alegra Labs GmbH<br>Vordersteig 12, Ettlingen 76275<br>+49 173 4526589</span>
+          </div>
+          <div class="office">
+            <strong>India</strong>
+            <span>Old UCO Bank Bldg, Adabari Tiniali<br>Guwahati – 781012<br>+91 88227 74191</span>
+          </div>
+          <div class="office">
+            <strong>UK</strong>
+            <span>32 Mortimer Square, Ebbsfleet Valley<br>Swanscombe DA10<br>+44 780 960 0786</span>
+          </div>
+        </div>
+        <a href="mailto:hello@alegralabs.com" class="btn-primary btn-large" id="cta-email-btn">Send Us a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Alegra<span class="logo-accent">Labs</span></span>
+        <p>Masters of the Web</p>
+        <p class="footer-copy">© 2024–2025 AlegraLabs GmbH. All rights reserved.</p>
+        <a href="#" class="footer-privacy">Privacy Policy</a>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h3>Navigate</h3>
+        <ul role="list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#stats">About</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.alegralabs.com/career" target="_blank" rel="noopener">Careers</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3>Follow</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Alegralabs/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/helix-enterprise" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/alegralabs22" target="_blank" rel="noopener" aria-label="Twitter/X" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alegralabs7/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="fluid.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
